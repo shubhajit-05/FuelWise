@@ -9,7 +9,10 @@ FuelWise is an intelligent Android application that helps drivers optimize fuel 
 - Compare fuel by efficiency with the current price
 - Save comparison in history 
 - Save comparison price
-  
+
+## Use Case Diagram
+![Screenshot 2025-04-05 155709](https://github.com/user-attachments/assets/09658190-c32d-463e-904e-0076f906098d)
+
 ## Tech Stack  
 `Kotlin` `XML` `Room Database` `Retrofit`
 
