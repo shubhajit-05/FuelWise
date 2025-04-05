@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.filipe1309.abasteceai.libraries.ui_components'
+}
+
+dependencies {
+    implementation Deps.android_material_design
+
+    testImplementation Deps.test_junit
+    androidTestImplementation Deps.test_androidx_test_ext_junit
+    androidTestImplementation Deps.test_androidx_espresso_core
+}

@@ -1,0 +1,45 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.filipe1309.abasteceai'
+
+    defaultConfig {
+        applicationId "com.filipe1309.abasteceai"
+        versionCode Versions.version_code
+        versionName Versions.version_name
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    // Local Libs
+    implementation project(LocalLibs.ui_comparator)
+    implementation project(LocalLibs.domain_comparator)
+    implementation project(LocalLibs.domain_fuels)
+    implementation project(LocalLibs.domain_histories)
+    implementation project(LocalLibs.data_histories)
+    implementation project(LocalLibs.data_fuels)
+    implementation project(LocalLibs.libraries_ui_components)
+    implementation project(LocalLibs.libraries_actions)
+    implementation project(LocalLibs.libraries_database)
+
+    implementation Deps.androidx_support_lib
+    implementation Deps.androidx_constraint_layout
+
+    // Koin
+    implementation Deps.koin_core
+    implementation Deps.koin_android
+
+    // Tests
+    testImplementation Deps.test_junit
+    androidTestImplementation Deps.test_androidx_test_ext_junit
+    androidTestImplementation Deps.test_androidx_espresso_core
+}
