@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "AbasteceAi"
+include ':app'
+include ':libraries:actions'
+include ':libraries:ui-components'
+include ':libraries:database'
+include ':ui:comparator'
+include ':domain:comparator'
+include ':data:fuels'
+include ':data:histories'
+include ':domain:histories'
+include ':domain:fuels'
